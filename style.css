@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white-paragraphs: #ffffffbf;
+  --very-light-gray: #f2f2f2;
+  --font-heading: 'Big Shoulders Display', sans-serif;
+  --font-para: 'Lexeca Display', sans-serif;
+
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: var(--font-heading);
+}
+
+body {
+  background: var(--very-light-gray);
+  color: var(--transparent-white-paragraphs);
+}
+main {
+  position: relative;
+}
+
+.cards {
+  max-width: 920px;
+  margin-inline: 24px;
+  margin-block: 88px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-sedan {
+  background-color: var(--bright-orange);
+}
+.card-suv {
+  background-color: var(--dark-cyan);
+}
+.card-luxury {
+  background-color: var(--very-dark-cyan);
+}
+.card-sedan button {
+  color: var(--bright-orange);
+}
+.card-suv button {
+  color: var(--dark-cyan);
+}
+.card-luxury button {
+  color: var(--very-dark-cyan);
+}
+
+.card {
+  padding: 48px 50px;
+}
+.card h2 {
+  margin-top: 2.33rem;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+.card p {
+  font-family: var(--font-para);
+  line-height: 25px;
+  color: var(--transparent-white-paragraphs);
+  margin-bottom: 25px;
+}
+.card button {
+  text-transform: capitalize;
+  font-family: var(--font-para);
+  line-height: 25px;
+  padding: 9.5px 37px;
+  border-radius: 25px;
+  border: 2px solid var(--very-light-gray);
+  outline: transparent;
+  cursor: pointer;
+  background-color: var(--very-light-gray);
+  transition: all 0.2s linear;
+}
+
+.card button:hover {
+  background-color: transparent;
+  color: var(--very-light-gray);
+}
+
+.attribution {
+  text-align: center;
+  color: var(--bright-orange);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.attribution a:link,
+a:visited {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 850px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .cards {
+    /* margin: auto;
+    margin-top: 88px; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
